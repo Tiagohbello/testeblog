@@ -15,11 +15,14 @@
     <div>
         <h2><a href=""> Área dos posts :)</a></h2>
         <p>poste aqui o que você quiser</p>
-    </div>
-    <div>
-        <h3>Primeiro post</h3>
-        <p>bla bla bla bla</p>
-         <p>publicado em 06.04.2022 às 8:48</p>
-    </div>
+    {% for post in posts %}
+        <div>
+            <p> publicado em : {{post.published_date}}</p>
+            <h3><a href="">{{post.title}}</a> </h3>
+            <p>{{post.text|linebreaksbr}}</p>
+        </div>
+
+
+    {% endfor %}
 </body>
 </html>
